@@ -1,0 +1,14 @@
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\bin\Debug\net6.0\Day3.exe
+C:\Users\danny\Source\Repos\daniosr\AdventOfCode2021\Day3\bin\Debug\net6.0\Day3.deps.json
+C:\Users\danny\Source\Repos\daniosr\AdventOfCode2021\Day3\bin\Debug\net6.0\Day3.runtimeconfig.json
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\bin\Debug\net6.0\Day3.dll
+C:\Users\danny\Source\Repos\daniosr\AdventOfCode2021\Day3\bin\Debug\net6.0\ref\Day3.dll
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\bin\Debug\net6.0\Day3.pdb
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\obj\Debug\net6.0\Day3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\obj\Debug\net6.0\Day3.AssemblyInfoInputs.cache
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\obj\Debug\net6.0\Day3.AssemblyInfo.cs
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\obj\Debug\net6.0\Day3.csproj.CoreCompileInputs.cache
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\obj\Debug\net6.0\Day3.dll
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\obj\Debug\net6.0\ref\Day3.dll
+C:\Users\danny\source\repos\daniosr\AdventOfCode2021\Day3\obj\Debug\net6.0\Day3.pdb
+C:\Users\danny\Source\Repos\daniosr\AdventOfCode2021\Day3\obj\Debug\net6.0\Day3.genruntimeconfig.cache
