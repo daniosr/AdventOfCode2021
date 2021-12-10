@@ -1,33 +1,80 @@
-﻿// Get the data from the internet
-System.Net.WebClient wc = new System.Net.WebClient();
+﻿// Reads the data from the provided file
+string raw = "";
 
-// Sets the cookie information so correct data can be fetched
-wc.Headers.Add(System.Net.HttpRequestHeader.Cookie, "session=53616c7465645f5f4b727ee5d0bc8441103fd0afc7551804037f39e2f6709bf183efb0c3cb68f25c5cca3edb319cb64b");
-string raw = wc.DownloadString("https://adventofcode.com/2021/day/1/input");
+try
+{
+    raw = System.IO.File.ReadAllText("..\\..\\..\\input.txt");
+}
+catch(Exception ex)
+{
+    Console.WriteLine(ex.Message);
+    return;
+}
+
 
 // splits the array into lines
 string[] rawArray = raw.Split("\n");
 
-int count = 0;
-int previous = int.MaxValue;
-int current = 0;
-
-bool success;
-
-// Goes through each lines and calculates the count
-foreach (string line in rawArray)
+int NumberOfIncreases(string[] rawArray)
 {
-    success = Int32.TryParse(line, out current);
+    int count = 0;
+    int previous = int.MaxValue;
+    int current = 0;
 
-    if(success && current > previous)
+    bool success;
+
+    // Goes through each lines and calculates the count
+    foreach (string line in rawArray)
     {
-        count++;
-    } 
-    
-    if(success)
-    {
-        previous = current;
+        success = Int32.TryParse(line, out current);
+
+        if (success && current > previous)
+        {
+            count++;
+        }
+
+        if (success)
+        {
+            previous = current;
+        }
     }
+
+    return count;
 }
 
-Console.WriteLine(count);
+int NumberOfIncreasesWindow(string[] rawArray)
+{
+    int count = 0;
+    bool success;
+    int[] window = new int[3];
+
+    int previousWindowTotal = Int32.MaxValue;
+    int currentWindowTotal = 0;
+
+    for(int i = 0; i < rawArray.Length-2; i++)
+    {
+        success = Int32.TryParse(rawArray[i], out window[0]) && Int32.TryParse(rawArray[i+1], out window[1]) && Int32.TryParse(rawArray[i+2], out window[2]);
+        
+        if(success)
+        {
+            foreach(int value in window)
+            {
+                currentWindowTotal += value;
+            }
+            if(currentWindowTotal > previousWindowTotal)
+            {
+                count++;
+            }
+            previousWindowTotal = currentWindowTotal;
+            currentWindowTotal = 0;
+        }
+    }
+
+    return count;
+}
+
+int count = NumberOfIncreases(rawArray);
+int windowCount = NumberOfIncreasesWindow(rawArray);
+
+Console.WriteLine("Number of Increases without window: " + count);
+Console.WriteLine("Number of Increases with window: " + windowCount);
