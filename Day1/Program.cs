@@ -53,6 +53,7 @@ int NumberOfIncreasesWindow(string[] rawArray)
 
     for(int i = 0; i < rawArray.Length-2; i++)
     {
+        // TODO: Reduce inneficiency from parsing the same value multiple times
         success = Int32.TryParse(rawArray[i], out window[0]) && Int32.TryParse(rawArray[i+1], out window[1]) && Int32.TryParse(rawArray[i+2], out window[2]);
         
         if(success)
